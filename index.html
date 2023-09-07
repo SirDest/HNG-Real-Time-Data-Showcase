@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REAL-TIME DATA SHOWCASE</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="body-content">
+        <!-- slack display name -->
+        <h1 data-testid="slackUserName">AKINRO Destined Modupe</h1>
+        <!-- slack profile picture -->
+        <img
+          src="/Static/Images/avi.jpg"
+          alt="ProfilePicture"
+          data-testid="slackDisplayImage"
+        />
+        <!-- Track -->
+        <p id="developer-info" data-testid="myTrack">Front-End Developer</p>
+        <!-- Current UTC day of the week and time -->
+        <p>
+          Today is <span data-testid="currentDayOfTheWeek"></span>,
+          <span data-testid="currentUTCTime"></span>
+        </p>
+        <!-- github url -->
+        <button>
+          <a href="" data-testid="githubURL">GitHub Repository</a>
+        </button>
+      </div>
+    </div>
+    <!-- Linking javascript file -->
+    <script src="/main.js"></script>
+  </body>
+</html>
