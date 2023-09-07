@@ -2,8 +2,6 @@ const timeContainer = document.querySelector('[data-testid="currentUTCTime"]');
 const dayContainer = document.querySelector(
   '[data-testid="currentDayOfTheWeek"]'
 );
-const gitButton = document.querySelector('[data-testid="githubURL"]');
-const gitUrl = "https://github.com/SirDest/HNG-Real-Time-Data-Showcase";
 
 // Below is to get the current time
 const getCurrentDateTime = () => {
@@ -43,8 +41,3 @@ setInterval(updateData, 1000);
 
 // Initial data update
 updateData();
-
-const gitLink = () => {
-  window.open(gitLink);
-};
-gitButton.addEventListener(onclick, gitLink);
