@@ -2,17 +2,19 @@ const timeContainer = document.querySelector('[data-testid="currentUTCTime"]');
 const dayContainer = document.querySelector(
   '[data-testid="currentDayOfTheWeek"]'
 );
+const username = document.querySelector('[data-testid="SlackUserName"]');
 
-// Below is to get the current time
-const getCurrentDateTime = () => {
-  const now = new Date();
-
-  const time =
-    now.getUTCHours().toString().padStart(2, "0") +
-    ":" +
-    now.getUTCMinutes().toString().padStart(2, "0");
-  return `${time} UTC`;
+// Username
+const getUsername = () => {
+  return "Destined";
 };
+
+// Below is to get the current time in milliseconds
+const getCurrentUTCTimeInMilliseconds = () => {
+  return new Date().getTime();
+};
+
+const utcMilliseconds = getCurrentUTCTimeInMilliseconds();
 
 // This is to get the current day of the week
 const getCurrentDay = () => {
@@ -32,8 +34,9 @@ const getCurrentDay = () => {
 
 //  function to run the date, time and day
 const updateData = () => {
-  timeContainer.textContent = getCurrentDateTime();
+  timeContainer.textContent = utcMilliseconds;
   dayContainer.textContent = getCurrentDay();
+  username.textContent = getUsername();
 };
 
 // Update data every 1 seconds
@@ -41,3 +44,5 @@ setInterval(updateData, 1000);
 
 // Initial data update
 updateData();
+
+console.log(utcMilliseconds);
